@@ -39,7 +39,8 @@ function analyze() {
       // var response = JSON.parse(e.target.responseText);
       // el("result-label").innerHTML = `Result = ${response["result"]}`;
       var response = e.target.responseText;
-      el("result-label").innerHTML = `$response`;
+      // el("result-label").innerHTML = `$response`;
+      el("result-label").innerHTML = e.target.responseText;
     }
     el("analyze-button").innerHTML = "Analyze";
   };
