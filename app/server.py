@@ -2,8 +2,10 @@ import aiohttp
 import asyncio
 import uvicorn
 from fastai import *
-from fastai.vision import *
-from io import BytesIO
+# from fastai.vision import *
+from fastai.text import *
+# from io import BytesIO
+from io import StringIO
 from starlette.applications import Starlette
 from starlette.middleware.cors import CORSMiddleware
 from starlette.responses import HTMLResponse, JSONResponse
@@ -61,11 +63,21 @@ async def homepage(request):
 
 @app.route('/analyze', methods=['POST'])
 async def analyze(request):
-    img_data = await request.form()
-    img_bytes = await (img_data['file'].read())
-    img = open_image(BytesIO(img_bytes))
-    prediction = learn.predict(img)[0]
-    return JSONResponse({'result': str(prediction)})
+    # img_data = await request.form()
+    # img_bytes = await (img_data['file'].read())
+    # img = open_image(BytesIO(img_bytes))
+    
+    data = await request.json()
+    print("data:", data)
+    img = data["textField"]
+    print("data['textField']", data["textField"])
+    print("img:", img)
+    
+    # prediction = learn.predict(img)[0]
+    
+    prediction = learn.predict(img)
+    print("prediction:", prediction)
+    return JSONResponse({'This is the poem': str(prediction)})
 
 
 if __name__ == '__main__':
