@@ -13,8 +13,8 @@ from starlette.staticfiles import StaticFiles
 # export_file_name = 'export.pkl'
 # classes = ['black', 'grizzly', 'teddys']
 
-export_file_url = 'https://www.dropbox.com/s/9icn50xjw094n52/monos-costarica2.pkl?dl=1'
-export_file_name = 'monos-costarica2.pkl'
+export_file_url = 'https://www.dropbox.com/s/2h0vijh5ioo2f5n/golem_pass1_282474.pkl?dl=1'
+export_file_name = 'golem_pass1_282474.pkl'
 classes = ['araña', 'ardilla', 'aullador', 'capuchino']
 
 path = Path(__file__).parent
