@@ -75,7 +75,7 @@ async def analyze(request):
     
     # prediction = learn.predict(img)[0]
     
-    prediction = learn.predict(img)
+    prediction = learn.predict(img, 55, temperature=0.75)
     print("prediction:", prediction)
     return JSONResponse({'This is the poem': str(prediction)})
 
