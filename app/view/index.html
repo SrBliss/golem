@@ -19,7 +19,7 @@
 <body>
 <div>
   <div class='center'>
-    <div class='title'>MONOS DE COSTA RICA</div>
+    <div class='title'>PoesIA: Golem</div>
     <div class='content'>
       <table>
                    <col width="25%">
@@ -40,13 +40,17 @@
                    </tr>
       </table>
       <div class='no-display'>
+        <!--
         <input id='file-input'
                class='no-display'
                type='file'
                name='file'
                accept='image/*'
                onchange='showPicked(this)'>
+        -->
       </div>
+      
+      <!--
       <button class='choose-file-button' type='button' onclick='showPicker()'>Nueva Imagen</button>
       <div class='upload-label'>
         <label id='upload-label'>Imagen no elegida</label>
@@ -54,8 +58,14 @@
       <div>
         <img id='image-picked' class='no-display' alt='Chosen Image' height='200'>
       </div>
+      -->
+      
+      <form class='choose-file-button' type='text'>
+          <input id="reviewText" type="text" name="firstname" value="Escribe una frase...">
+      </form>
+      
       <div class='analyze'>
-        <button id='analyze-button' class='analyze-button' type='button' onclick='analyze()'>Analizar</button>
+        <button id='analyze-button' class='analyze-button' type='button' onclick='analyze()'>Vamos!</button>
       </div>
       <div class='result-label'>
         <label id='result-label'></label>
