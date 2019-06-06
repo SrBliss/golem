@@ -1,0 +1,67 @@
+<html lang='en'>
+<head>
+  <meta charset='utf-8'>
+  <link rel='stylesheet' href='../static/style.css'>
+  <script src='../static/client.js'></script>
+  <style>
+            table {
+                font-family: arial, sans-serif;
+                border-collapse: collapse;
+            width: 100%;
+            }
+            td, th {align="center"
+                border: 1px solid #dddddd;
+                text-align: center;
+                padding: 8px;
+            }
+   </style>
+</head>
+<body>
+<div>
+  <div class='center'>
+    <div class='title'>MONOS DE COSTA RICA</div>
+    <div class='content'>
+      <table>
+                   <col width="25%">
+                   <col width="25%">
+                   <col width="25%">
+                   <col width="25%">
+                   <tr>
+                       <th>Araña</th>
+                       <th>Ardilla</th>
+                       <th>Aullador</th>
+                       <th>Capuchino</th>
+                   </tr>
+                   <tr>
+                       <td><img src='../static/monoarana.jpg' alt='Mono Araña' width='80%'></td>
+                       <td><img src='../static/monoardilla.jpg' alt='Mono Ardilla' width='80%'></td>
+                       <td><img src='../static/monoaullador.jpg' alt='Mono Aullador' width='80%'></td>
+                       <td><img src='../static/monocapuchino.jpg' alt='Mono Capuchino' width='80%'></td>
+                   </tr>
+      </table>
+      <div class='no-display'>
+        <input id='file-input'
+               class='no-display'
+               type='file'
+               name='file'
+               accept='image/*'
+               onchange='showPicked(this)'>
+      </div>
+      <button class='choose-file-button' type='button' onclick='showPicker()'>Nueva Imagen</button>
+      <div class='upload-label'>
+        <label id='upload-label'>Imagen no elegida</label>
+      </div>
+      <div>
+        <img id='image-picked' class='no-display' alt='Chosen Image' height='200'>
+      </div>
+      <div class='analyze'>
+        <button id='analyze-button' class='analyze-button' type='button' onclick='analyze()'>Analizar</button>
+      </div>
+      <div class='result-label'>
+        <label id='result-label'></label>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
