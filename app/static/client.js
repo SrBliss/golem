@@ -37,7 +37,7 @@ function analyze() {
       console.log("e.target:", e.target)
       
       var response = JSON.parse(e.target.responseText);
-      el("result-label").innerHTML = `Result = ${response["pred"]}`;
+      el("result-label").innerHTML = `${response["pred"]}`;
       // var response = e.target.responseText;
       // el("result-label").innerHTML = `$response`;
       // el("result-label").innerHTML = e.target.responseText;
