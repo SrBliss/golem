@@ -38,6 +38,7 @@ body {
     padding: 10px;
     font-size: 16px;
     font-weight: bold;
+    text-align: left;
 }
 
 button.choose-file-button {
