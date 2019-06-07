@@ -7,12 +7,18 @@
             table {
                 font-family: arial, sans-serif;
                 border-collapse: collapse;
-            width: 100%;
+                width: 100%;
             }
             td, th {align="center"
                 border: 1px solid #dddddd;
                 text-align: center;
                 padding: 8px;
+            }
+            input[type=text] {
+                width: 50%;
+                padding: 12px 20px;
+                margin: 8px 0;
+                box-sizing: border-box;
             }
    </style>
 </head>
@@ -36,7 +42,8 @@
                        <td>Inspírame y te regalaré un poema:<br><br>
                          <br>
                          
-                         <form class='choose-file-button' type='text'>
+                         <!-- <form class='choose-file-button' type='text'> -->
+                         <form>
                             <input id="reviewText" type="text" name="firstname" value="">
                          </form>
                          <br>
