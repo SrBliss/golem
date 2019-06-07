@@ -74,13 +74,28 @@ async def analyze(request):
     print("img:", img)
     
     # prediction = learn.predict(img)[0]
+        
+    poem = learn.predict(img, 55, temperature=0.75)
+    print("poem:", poem)
     
-    prediction = learn.predict(img, 55, temperature=0.75)
-    print("prediction:", prediction)
+    lastWord = "notfinal"
+    finalWords_list = [".", ";", "!", "?"]
+
+    while ( lastWord not in finalWords_list ) :
+        poem = learn.predict(poem, 1, temperature=0.75)
+        poem_list = poem.split()  # list of words
+        lastWord = poem_list[-1]
+
+    formatted_poem = ""
+    for i in newTEXT:
+        formatted_poem.append(i)
+        if i in finalWords_list:
+            formatted_poem.append("\n")
+    
     # return JSONResponse({'This is the poem': str(prediction)})
     # return JSONResponse({str(prediction)}) # esta va mal
     # return str(prediction) # esta va mal
-    return JSONResponse({'pred': str(prediction)}) # JSONResponse({"key": "value"})
+    return JSONResponse({'pred': str(formatted_poem)}) # JSONResponse({"key": "value"})
 
 
 if __name__ == '__main__':
