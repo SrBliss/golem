@@ -88,9 +88,9 @@ async def analyze(request):
 
     formatted_poem = ""
     for i in poem:
-        formatted_poem.append(i)
+        formatted_poem = formatted_poem + i
         if i in finalWords_list:
-            formatted_poem.append("\n")
+            formatted_poem = formatted_poem + "\n"
     
     # return JSONResponse({'This is the poem': str(prediction)})
     # return JSONResponse({str(prediction)}) # esta va mal
