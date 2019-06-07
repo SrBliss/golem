@@ -36,11 +36,11 @@ function analyze() {
     if (this.readyState === 4) {
       console.log("e.target:", e.target)
       
-      // var response = JSON.parse(e.target.responseText);
-      // el("result-label").innerHTML = `Result = ${response["result"]}`;
-      var response = e.target.responseText;
+      var response = JSON.parse(e.target.responseText);
+      el("result-label").innerHTML = `Result = ${response["pred"]}`;
+      // var response = e.target.responseText;
       // el("result-label").innerHTML = `$response`;
-      el("result-label").innerHTML = e.target.responseText;
+      // el("result-label").innerHTML = e.target.responseText;
     }
     el("analyze-button").innerHTML = "Analyze";
   };
