@@ -42,7 +42,7 @@ body {
 }
 
 button.choose-file-button {
-    width: 50%;
+    width: 300px;
     border-radius: 2px;
     background-color: #ffffff;
     border: solid 1px #7052CB;
