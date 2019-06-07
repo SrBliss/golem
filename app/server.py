@@ -79,7 +79,8 @@ async def analyze(request):
     print("prediction:", prediction)
     # return JSONResponse({'This is the poem': str(prediction)})
     # return JSONResponse({str(prediction)}) # esta va mal
-    return str(prediction)
+    # return str(prediction) # esta va mal
+    return JSONResponse({'pred': str(prediction)}) # JSONResponse({"key": "value"})
 
 
 if __name__ == '__main__':
