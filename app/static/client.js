@@ -22,7 +22,7 @@ function analyze() {
   
   // if (uploadFiles.length !== 1) alert("Please select a file to analyze!");
 
-  el("analyze-button").innerHTML = "Analyzing...";
+  el("analyze-button").innerHTML = "Creando...";
   var xhr = new XMLHttpRequest();
   var loc = window.location;
   xhr.open("POST", `${loc.protocol}//${loc.hostname}:${loc.port}/analyze`, true);
@@ -42,7 +42,7 @@ function analyze() {
       // el("result-label").innerHTML = `$response`;
       // el("result-label").innerHTML = e.target.responseText;
     }
-    el("analyze-button").innerHTML = "Analyze";
+    el("analyze-button").innerHTML = "Crear";
   };
 
   // var fileData = new FormData();
