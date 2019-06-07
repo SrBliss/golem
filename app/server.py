@@ -87,7 +87,7 @@ async def analyze(request):
         lastWord = poem_list[-1]
 
     formatted_poem = ""
-    for i in newTEXT:
+    for i in poem:
         formatted_poem.append(i)
         if i in finalWords_list:
             formatted_poem.append("\n")
